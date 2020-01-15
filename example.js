@@ -19,7 +19,7 @@ M.onError(err => {
 })
 
 
-app.get('/', (req, res) => res.status(200).send(`[${sEnv}] Messenger chatbot`));
+app.get('/', (req, res) => res.status(200).send(`Messenger chatbot`));
 
 // Accepts GET requests at the /webhook endpoint
 app.get('/webhook', M.webhook.get);

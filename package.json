@@ -1,0 +1,27 @@
+{
+  "name": "messenger-chatbot-helper",
+  "version": "0.0.3",
+  "description": "A library that simplifies Facebook Messenger chatbot creation and setup",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "facebook",
+    "chatbot",
+    "messenger"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samsoul007/messenger-chatbot-helper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/samsoul007/messenger-chatbot-helper/issues"
+  },
+  "homepage": "https://github.com/samsoul007/messenger-chatbot-helper#readme",
+  "author": "Jacques Sirot <jsirot@gmail.com>",
+  "license": "MIT"
+}

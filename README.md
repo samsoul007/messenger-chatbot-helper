@@ -105,6 +105,17 @@ MCH.pageToken("the page ID", "the page token");
 const pageToken = MCH.pageToken("the page ID");
 ```
 
+### MCH.setContextDelimiter(delimiter)
+When you use contexts, the responseType will setup the delimiter after the value set and will then parse it when the data is coming back. The default value is `::`.
+
+For example is you have a quickReply with value `testValue` and context `main_menu`. When the user click the button on chat, the payload for this button will be `testValue::main_menu`.
+
+You can change the delimiter in order to avoid conflicts with your current code.
+
+```javascript
+MCH.setContextDelimiter("||") // now it will be ´testValue||main_menu´
+```
+
 
 ### MCH.onError(function)
 You can define a function that will be called when an error occurs
@@ -176,10 +187,6 @@ This is the what the rule returns when it is valid. You can add as many chained 
 
 If this method is executed inside a rule, this rule will be the only one returned upon validation. Otherwise the other rules added after will be processed.
 
-### hasContext(context)
-
-Some ReturnTypes can have a context name attached to it, allowing you to send back information based on the rule that was validated in the previous request. This is especially useful for menus. Check the `responseTypes` for more information.
-
 ### if() methods
 
 This is not an exhaustive list and new ones will be added over time.
@@ -189,7 +196,7 @@ Common Methods
 Name|Description  
 --|--
 `isQuestion()`|If the text is a question
-`hasContext(context)`|If the response has a context attached. The `context` parameters is a string
+`hasContext(context)`|If the response has a context attached. The `context` parameters is a string<br><br>Some ReturnTypes can have a context name attached to it, allowing you to send back information based on the rule that was validated in the previous request. This is especially useful for menus. Check the `responseTypes` for more information.
 `hasPayload(payload)`|If the response has a payload.
 `hasText(text...)`|If the response has specific text. Multiple text can be passed as arguments and will be handle as an OR ( text1 or text2 , etc.).
 

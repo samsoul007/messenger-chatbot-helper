@@ -1,6 +1,6 @@
 {
   "name": "messenger-chatbot-helper",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A library that simplifies Facebook Messenger chatbot creation and setup",
   "main": "index.js",
   "directories": {
